@@ -13,32 +13,17 @@ npm install -g testcafe
 For more information on TestCafe, you can take a look at 
 [TestCafe](https://devexpress.github.io/testcafe/documentation/getting-started/).
 
-## Creating a Test
-
-Once you have TestCafe installed, you can create a .js or .ts file inside of the tests folder. This file must have a special structure - tests must be organized into fixtures.
-The test structure should look something like the following:
-
-```python
-import { Selector } from 'testcafe';
-fixture `Getting Started`
-    .page `http://devexpress.github.io/testcafe/example`;
-test('My first test', async t => {
-    await t
-        .typeText('#developer-name', 'John Smith')
-        .click('#submit-button');
-});
-```
 ## Running the Test
 
 Once you finish writing your test, you need to a command where you specify the [target browser (Google Chrome, Safari, IE)](https://devexpress.github.io/testcafe/documentation/reference/command-line-interface.html#browser-list) and the [file path](https://devexpress.github.io/testcafe/documentation/reference/command-line-interface.html#file-pathglob-pattern)
 
-The comman should looks like this:
+The comman should looks like this for the initial login test:
 ```
-testcafe chrome test1.js
+testcafe chrome LiferayLogin.js
 ```
 or 
 ```
-testcafe safari tests/test1.js
+testcafe firefox dir/to/tests/LiferayLogin.js
 ```
 
 ## Viewing the Test Results
